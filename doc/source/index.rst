@@ -1,3 +1,8 @@
-============================================
-Welcome to the documentation of auto-scaling
-============================================
+Auto Scaling
+============
+
+.. directive_wrapper::
+   :class: container-sbv
+
+   .. service_card::
+      :service_type: as
