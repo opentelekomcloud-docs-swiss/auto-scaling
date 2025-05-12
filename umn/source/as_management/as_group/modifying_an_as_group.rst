@@ -8,7 +8,7 @@ Modifying an AS Group
 Scenarios
 ---------
 
-You can modify an AS group if needed. The values of the following parameters can be changed: **Name**, **Max. Instances**, **Min. Instances**, **Expected Instances**, **Health Check Method**, **Health Check Interval**, **Instance Removal Policy**.
+You can modify an AS group if needed. The values of the following parameters can be changed: **Name**, **Max. Instances**, **Min. Instances**, **Expected Instances**, **Health Check Method**, **Instance Removal Policy**, and **Health Check Interval**.
 
 .. note::
 

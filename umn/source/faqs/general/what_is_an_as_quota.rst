@@ -28,4 +28,4 @@ How Do I View My Quotas?
    If a quota cannot meet service requirements, apply for a higher quota.
 
 .. |image1| image:: /_static/images/en-us_image_0275513364.png
-.. |image2| image:: /_static/images/en-us_image_0152727234.png
+.. |image2| image:: /_static/images/en-us_image_0000002189833272.png

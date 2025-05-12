@@ -28,9 +28,9 @@ A scaling action adds instances to or removes instances from an AS group. It ens
 Cooldown Period
 ---------------
 
-To prevent an alarm-based policy from being triggered repeatedly by the same event, configure a cooldown period. A cooldown period specifies how long any alarm-triggered scaling action will be disallowed after a previous scaling action is complete. This cooldown period does not apply to scheduled or periodic scaling actions.
+To prevent an alarm-based policy from being repeatedly triggered by the same event, you can set a cooldown period. A cooldown period (in seconds) is the period of time between two scaling actions. AS recounts the cooldown period after a scaling action is complete. During the cooldown period, AS denies all scaling requests triggered by alarm-based policies. Scaling requests triggered manually or by scheduled or periodic policies are not affected.
 
-For example, if you set the cooldown period to 300 seconds (5 minutes), and there is a scaling action scheduled for 10:32, but a previous scaling action was complete at 10:30, any alarm-triggered scaling actions will be denied during the cooldown period from 10:30 to 10:35, but the scheduled scaling action will still be triggered at 10:32. If the scheduled scaling action ends at 10:36, a new cooldown period starts at 10:36 and ends at 10:41.
+For example, suppose that the cooldown period is set to 300 seconds (5 minutes), and a scheduled policy is specified to trigger a scaling action at 10:32, and a previous scaling action triggered by an alarm policy ends at 10:30. Any alarm-triggered scaling action will then be denied during the cooldown period from 10:30 to 10:35, but the scaling action scheduled for 10:32 will still take place. If the scheduled scaling action ends at 10:36, a new cooldown period starts at 10:36 and ends at 10:41.
 
 .. _en-us_topic_0042018372__en-us_topic_0190954061_section1849311910328:
 
@@ -44,11 +44,11 @@ After you configure a scaling policy as needed, when the trigger condition is me
 Region
 ------
 
-A region is a geographic area where the resources used by AS are located.
+A region is a geographic area where resources used by AS are located.
 
 AZs in the same region can communicate with each other over an intranet, but AZs in different regions cannot.
 
-Cloud data centers are deployed in locations around the world, including Europe and Asia, and AS applies to different regions. Deploying AS in different regions allows you to tailor policies to better suit your requirements. For example, applications can be designed to meet user requirements in specific regions or comply with local laws or regulations.
+Cloud data centers are deployed in locations around the world. You can use AS in different regions. Deploying AS in different regions allows you to tailor policies to better suit your requirements. For example, applications can be designed to meet user requirements in specific regions or comply with local laws or regulations.
 
 Project
 -------

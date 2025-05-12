@@ -10,7 +10,7 @@ Function Restrictions
 
 AS has the following restrictions:
 
--  Only applications that are stateless and can be horizontally scaled can run on instances in an AS group.
+-  Only applications that are stateless and horizontally scalable can run on instances in an AS group.
 
    .. note::
 
