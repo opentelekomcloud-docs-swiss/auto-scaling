@@ -8,7 +8,7 @@ What Is Auto Scaling?
 AS Introduction
 ---------------
 
-Auto Scaling (AS) helps you automatically scale Elastic Cloud Server (ECS) and bandwidth resources to keep up with changes in demand based on pre-configured AS policies. It allows you to add ECS instances to handle increases in load and also save money by removing ECSs that are sitting idle. :ref:`Figure 1 <en-us_topic_0042018383__en-us_topic_0190954081_fig7783628154719>` shows the typical scaling actions
+Auto Scaling (AS) helps you automatically scale Elastic Cloud Server (ECS) and bandwidth resources to keep up with changes in demand based on pre-configured AS policies. It allows you to add ECS instances to handle increases in load and also save money by removing ECSs that are sitting idle. :ref:`Figure 1 <en-us_topic_0042018383__en-us_topic_0190954081_fig7783628154719>` shows the typical scaling actions.
 
 .. _en-us_topic_0042018383__en-us_topic_0190954081_fig7783628154719:
 

@@ -64,11 +64,11 @@ When you remove instances from an AS group, consider the restrictions below.
 
 .. note::
 
-   -  A maximum of 10 instances can be removed from to an AS group at a time.
+   -  A maximum of 50 instances can be removed from to an AS group at a time.
    -  If the number of instances you are removing decreases the number of instances in the AS group below the minimum number of instances allowed, AS launches new instances to maintain the expected capacity.
    -  If you remove instances from an AS group that has an associated load balancer, the instances will be dissociated from the load balancer.
 
-To remove an instance from an AS group, perform the following steps:
+To remove instances from an AS group, perform the following steps:
 
 #. Under **Computing**, click **Auto Scaling**.
 

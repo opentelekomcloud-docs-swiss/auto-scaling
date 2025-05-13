@@ -38,7 +38,6 @@ otcdocs_doc_type = 'umn'
 otcdocs_service_category = 'compute'
 otcdocs_service_title = 'Auto Scaling'
 otcdocs_service_type = 'as'
-otcdocs_cloud_environment = 'swiss'
 otcdocs_search_environment = 'hc_swiss'
 otcdocs_search_index = 'search_index_swiss'
 otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"

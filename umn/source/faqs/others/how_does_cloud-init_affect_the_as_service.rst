@@ -11,7 +11,7 @@ If Cloud-Init or Cloudbase-Init is not installed in the private image specified 
 
 -  On a Windows image, the system will display a message indicating that the password for logging in to the ECS could not be viewed. In such a case, you can log in to the ECS using the image password. If you forgot the image password, use the password resetting function available on the **Elastic Cloud Server** page to reset the password.
 
--  On a Linux image, the ECS cannot be logged in using the password or key pair configured during ECS creation. In such a case, you can log in to the ECS only using the image password or key pair. If you forgot the image password or key, use the password resetting function available on the **Elastic Cloud Server** page to reset the password.
+-  On a Linux image, the ECS cannot be logged in using the password or key pair configured during ECS creation. In such a case, you can log in to the ECS using the image password or key pair. If you forgot the image password or key, use the password resetting function available on the **Elastic Cloud Server** page to reset the password.
 
 -  On a private image, user data injection fails.
 

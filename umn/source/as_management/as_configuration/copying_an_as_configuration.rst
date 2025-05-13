@@ -18,5 +18,5 @@ Procedure
 #. Log in to the management console.
 #. Under **Computing**, click **Auto Scaling**.
 #. Click the **AS Configurations** tab, locate the row containing the target AS configuration, and click **Copy** in the **Operation** column.
-#. On the **Copy AS Configuration** page, modify parameter settings, such as **Name**, **Specifications**, and **Image**, and configure the ECS login mode based on service requirements.
+#. On the **Copy AS Configuration** page, modify parameter settings, such as **Name**, **Specifications**, and **Image**, and configure the ECS login mode (key pair) based on service requirements.
 #. Click **OK**.
