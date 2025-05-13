@@ -73,16 +73,16 @@ Request
 
 .. table:: **Table 3** **Tag** field description
 
-   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                                                                                                            |
-   +=================+=================+==================+========================================================================================================================================================================================================================================================================+
-   | key             | Yes             | String           | Specifies the tag key. It contains a maximum of 127 Unicode characters. It cannot be left blank (This parameter is not verified in the search process.) A maximum of 10 keys are allowed and the key cannot be left blank or an empty string. Each key must be unique. |
-   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | values          | Yes             | Array of strings | Specifies tag values. A value contains a maximum of 255 Unicode characters. A key contains a maximum of 10 values. Each value of the same key must be unique.                                                                                                          |
-   |                 |                 |                  |                                                                                                                                                                                                                                                                        |
-   |                 |                 |                  | -  The asterisk (*) is reserved for the system. If the value starts with \*, it indicates that fuzzy match is performed for the digits following \*. The value cannot contain only asterisks (*).                                                                      |
-   |                 |                 |                  | -  If the values are null (not default), it indicates **any_value** (querying any value). The resources contain one or multiple values listed in **values** will be found and displayed.                                                                               |
-   +-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                                                                                                           |
+   +=================+=================+==================+=======================================================================================================================================================================================================================================================================+
+   | key             | Yes             | String           | Specifies the tag key. It contains a maximum of 36 Unicode characters. It cannot be left blank (This parameter is not verified in the search process.) A maximum of 10 keys are allowed and the key cannot be left blank or an empty string. Each key must be unique. |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | values          | Yes             | Array of strings | Specifies tag values. A value contains a maximum of 43 Unicode characters. A key contains a maximum of 10 values. Each value of the same key must be unique.                                                                                                          |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                       |
+   |                 |                 |                  | -  The asterisk (*) is reserved for the system. If the value starts with \*, it indicates that fuzzy match is performed for the digits following \*. The value cannot contain only asterisks (*).                                                                     |
+   |                 |                 |                  | -  If the values are null (not default), it indicates **any_value** (querying any value). The resources contain one or multiple values listed in **values** will be found and displayed.                                                                              |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _as_06_1004__table197711657123614:
 
@@ -101,7 +101,7 @@ Request
 Example Request
 ---------------
 
--  This example queries the details of AS groups of a tenant using the following search criteria: including tag (key = **key1** and value = **value**), excluding tag (key = **key2** and value = **value2**), index position 100, and maximum number of records 100.
+-  This example queries the details of AS groups of a tenant using the following search criteria: including the tag (key = **key1** and value = **value1**), excluding the tag (key = **key2** and value = **value2**), index position 100, and a maximum number of 100 records.
 
    .. code-block:: text
 
@@ -125,7 +125,7 @@ Example Request
           }]
       }
 
--  This example shows how to query the number of AS groups for a tenant using the following search criteria: including the tag (key = **key1** and value = **value**) and excluding the tag (key = **key2** and value = **value2**).
+-  This example counts the number of AS groups for a tenant using the following search criteria: including the tag (key = **key1** and value = **value1**) and excluding the tag (key = **key2** and value = **value2**).
 
    .. code-block:: text
 
@@ -140,11 +140,6 @@ Example Request
           "tags": [{
               "key": "key1",
               "values": ["value1"]
-          },
-          {
-              "key": "key2",
-              "values": ["value1",
-              "value2"]
           }],
           "matches": [{
               "key": "resource_name",
@@ -192,7 +187,7 @@ Response
    +===========+========+==========================================================================+
    | key       | String | Specifies the tag key. It contains a maximum of 36 Unicode characters.   |
    +-----------+--------+--------------------------------------------------------------------------+
-   | value     | String | Specifies the tag value. It contains a maximum of 36 Unicode characters. |
+   | value     | String | Specifies the tag value. It contains a maximum of 43 Unicode characters. |
    +-----------+--------+--------------------------------------------------------------------------+
 
 Example Response
@@ -241,7 +236,7 @@ Returned Values
 -  Abnormal
 
    +-----------------------------------+--------------------------------------------------------------------------------------------+
-   | Returned Values                   | Description                                                                                |
+   | Returned Value                    | Description                                                                                |
    +===================================+============================================================================================+
    | 400 Bad Request                   | The server failed to process the request.                                                  |
    +-----------------------------------+--------------------------------------------------------------------------------------------+

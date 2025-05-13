@@ -2,7 +2,7 @@
 
 .. _as_06_0202:
 
-Querying AS configurations
+Querying AS Configurations
 ==========================
 
 Function
@@ -109,10 +109,6 @@ Response
    | key_name                     | String                                                                  | Specifies the name of the SSH key pair used to log in to the ECS.                              |
    +------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
    | key_fingerprint              | String                                                                  | Specifies the fingerprint of the SSH key pair used to log in to the ECS.                       |
-   +------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
-   | instance_name                | String                                                                  | This parameter is reserved.                                                                    |
-   +------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
-   | instance_id                  | String                                                                  | This parameter is reserved.                                                                    |
    +------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
    | adminPass                    | String                                                                  | This parameter is reserved.                                                                    |
    +------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
@@ -270,7 +266,10 @@ Example Response
                        {
                            "size": 40,
                            "volume_type": "SATA",
-                           "disk_type": "SYS"
+                           "disk_type": "SYS",
+                           "cluster_type" : "DSS",
+                           "hw:passthrough": true,
+                           "multiattach": false
                        },
                        {
                            "size": 100,
@@ -284,12 +283,18 @@ Example Response
                    "flavorRef": "103",
                    "imageRef": "37ca2b35-6fc7-47ab-93c7-900324809c5c",
                    "key_name": "keypair01",
+                   "key_fingerprint" : "SHA256:qlvdUkYgSjKUxcr2uJgJJRMCKMLkJO5BPLooBcgsF8k",
                    "public_ip": null,
                    "user_data": null,
-                   "metadate": {},
+                   "metadata": {},
                    "security_groups": [{
                         "id": "6c22a6c0-b5d2-4a84-ac56-51090dcc33be"
                    }],
+     "support_auto_recovery" : null,
+     "disk_prior" : null,
+     "cpu_options" : null,
+     "is_auto_rename" : false,
+     "instance_metadata" : null
                },
                "create_time": "2015-07-23T01:04:07Z"
            },
@@ -311,6 +316,7 @@ Example Response
                    "flavorRef": "103",
                    "imageRef": "37ca2b35-6fc7-47ab-93c7-900324809c5c",
                    "key_name": "keypair01",
+                   "key_fingerprint" : "SHA256:qlvdUkYgSjKUxcr2uJgJJRMCKMLkJO5BPLooBcgsF8k",
                    "public_ip": null,
                    "user_data": null,
                    "metadata": {},

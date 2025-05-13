@@ -33,7 +33,7 @@ GET /autoscaling-api/v1/{project_id}/scaling_group
    |                          |                 |                 |                                                                                                                                                                        |
    |                          |                 |                 | Fuzzy search is supported.                                                                                                                                             |
    +--------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | scaling_configuration_id | No              | String          | Specifies the AS configuration ID, which can be obtained using the API for listing AS configurations. For details, see :ref:`Querying AS configurations <as_06_0202>`. |
+   | scaling_configuration_id | No              | String          | Specifies the AS configuration ID, which can be obtained using the API for listing AS configurations. For details, see :ref:`Querying AS Configurations <as_06_0202>`. |
    +--------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | scaling_group_status     | No              | String          | Specifies the AS group status. The options are as follows:                                                                                                             |
    |                          |                 |                 |                                                                                                                                                                        |
@@ -159,7 +159,7 @@ Response
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | pool_id       | String  | Specifies the backend ECS group ID.                                                                                                                          |
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | protocol_port | Integer | Specifies the backend protocol ID, which is the port on which a backend ECS listens for traffic.                                                             |
+   | protocol_port | Integer | Specifies the backend protocol port, which is the port on which a backend ECS listens for traffic.                                                           |
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | weight        | Integer | Specifies the weight, which determines the portion of requests a backend ECS processes when being compared to other backend ECSs added to the same listener. |
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+

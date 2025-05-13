@@ -34,7 +34,7 @@ Request
    +--------------------------+-----------+------------------+-----------------------------------------------------------------------------------------------------+
    | Parameter                | Mandatory | Type             | Description                                                                                         |
    +==========================+===========+==================+=====================================================================================================+
-   | scaling_configuration_id | Yes       | Array of strings | Specifies the AS configuration ID. For details, see :ref:`Querying AS configurations <as_06_0202>`. |
+   | scaling_configuration_id | Yes       | Array of strings | Specifies the AS configuration ID. For details, see :ref:`Querying AS Configurations <as_06_0202>`. |
    +--------------------------+-----------+------------------+-----------------------------------------------------------------------------------------------------+
 
 Example Request

@@ -73,20 +73,34 @@ Request
 Example Request
 ---------------
 
-This example removes and deletes instances with IDs **instance_id_1** and **instance_id_2** from the AS group **e5d27f5c-dd76-4a61-b4bc-a67c5686719a** in a batch.
+-  This example adds two instances with IDs **instance_id_1** and **instance_id_2** to the AS group with ID **e5d27f5c-dd76-4a61-b4bc-a67c5686719a** in a batch.
 
-.. code-block:: text
+   .. code-block:: text
 
-   POST https://{Endpoint}/autoscaling-api/v1/{project_id}/scaling_group_instance/e5d27f5c-dd76-4a61-b4bc-a67c5686719a/action
+      POST https://{Endpoint}/autoscaling-api/v1/{project_id}/scaling_group_instance/e5d27f5c-dd76-4a61-b4bc-a67c5686719a/action
 
-   {
-       "action": "REMOVE",
-       "instances_id": [
-           "instance_id_1",
-           "instance_id_2"
-       ],
-       "instance_delete": "yes"
-   }
+      {
+          "action": "ADD",
+          "instances_id": [
+              "instance_id_1",
+              "instance_id_2"
+          ]
+      }
+
+-  This example removes and deletes instances with IDs **instance_id_1** and **instance_id_2** from the AS group **e5d27f5c-dd76-4a61-b4bc-a67c5686719a** in a batch.
+
+   .. code-block:: text
+
+      POST https://{Endpoint}/autoscaling-api/v1/{project_id}/scaling_group_instance/e5d27f5c-dd76-4a61-b4bc-a67c5686719a/action
+
+      {
+          "action": "REMOVE",
+          "instances_id": [
+              "instance_id_1",
+              "instance_id_2"
+          ],
+          "instance_delete": "yes"
+      }
 
 Response
 --------
