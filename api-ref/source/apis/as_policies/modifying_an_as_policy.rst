@@ -121,7 +121,7 @@ Request
 Example Request
 ---------------
 
-This example modifies the periodic AS policy with ID **0h327883-324n-4dzd-9c61-68d03ee191dd** for an AS group with two instances. The modification is as follows: The AS policy name is changed to **policy_01**, and the polify is executed at 16:00 every day from 2016-01-08T17:31Z to 2016-02-08T17:31Z.
+This example modifies the periodic AS policy with ID **0h327883-324n-4dzd-9c61-68d03ee191dd** for an AS group with two instances. The modification is as follows: The AS policy name is changed to **policy_01**, and the policy is executed at 16:00 every day from 2016-01-08T17:31Z to 2016-02-08T17:31Z.
 
 .. code-block:: text
 

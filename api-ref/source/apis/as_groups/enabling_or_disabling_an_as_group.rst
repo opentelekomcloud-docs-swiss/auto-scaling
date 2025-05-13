@@ -45,15 +45,25 @@ Request
 Example Request
 ---------------
 
-This example enables the AS group with ID **a8327883-6b07-4497-9c61-68d03ee193a1**.
+-  This example enables the AS group with ID **a8327883-6b07-4497-9c61-68d03ee193a1**.
 
-.. code-block:: text
+   .. code-block:: text
 
-   POST https://{Endpoint}/autoscaling-api/v1/{project_id}/scaling_group/a8327883-6b07-4497-9c61-68d03ee193a1/action
+      POST https://{Endpoint}/autoscaling-api/v1/{project_id}/scaling_group/a8327883-6b07-4497-9c61-68d03ee193a1/action
 
-   {
-       "action": "resume"
-   }
+      {
+          "action": "resume"
+      }
+
+-  This example disables the AS group with ID **a8327883-6b07-4497-9c61-68d03ee193a1**.
+
+   .. code-block:: text
+
+      POST https://{Endpoint}/autoscaling-api/v1/{project_id}/scaling_group/a8327883-6b07-4497-9c61-68d03ee193a1/action
+
+      {
+          "action": "pause"
+      }
 
 Response
 --------

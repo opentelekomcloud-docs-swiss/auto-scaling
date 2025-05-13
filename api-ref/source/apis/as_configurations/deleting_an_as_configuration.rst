@@ -26,7 +26,7 @@ DELETE /autoscaling-api/v1/{project_id}/scaling_configuration/{scaling_configura
    +==============================+===========+========+=====================================================================================================+
    | project_id                   | Yes       | String | Specifies the project ID.                                                                           |
    +------------------------------+-----------+--------+-----------------------------------------------------------------------------------------------------+
-   | scaling\_ configuration \_id | Yes       | String | Specifies the AS configuration ID. For details, see :ref:`Querying AS configurations <as_06_0202>`. |
+   | scaling\_ configuration \_id | Yes       | String | Specifies the AS configuration ID. For details, see :ref:`Querying AS Configurations <as_06_0202>`. |
    +------------------------------+-----------+--------+-----------------------------------------------------------------------------------------------------+
 
 Request

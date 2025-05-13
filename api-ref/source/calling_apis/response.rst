@@ -12,18 +12,21 @@ After sending a request, you will receive a response, including a status code, r
 
 A status code is a group of digits, ranging from 1xx to 5xx. It indicates the status of a request.
 
-For example, if status code 201 is returned for calling the API used to obtain a user token, the request is successful.
+For example, if status code **201** is returned for calling the API used to `obtain a user token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__, the request is successful.
 
 Response Header
 ---------------
 
-Similar to a request, a response also has a header, for example, **Content-type**.
+Similar to a request, a response also has a header, for example, **Content-Type**.
 
-:ref:`Figure 1 <as_04_0104__en-us_topic_0170155703_fig4865141011511>` shows the response header fields for the API used to obtain a user token. The **x-subject-token** header field is the desired user token. This token can then be used to authenticate the calling of other APIs.
+The following shows the response header fields for the `obtain a user token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__. The **X-Subject-Token** header field is the desired user token. You can use the token to authenticate other API calls.
 
-.. _as_04_0104__en-us_topic_0170155703_fig4865141011511:
+.. note::
 
-.. figure:: /_static/images/en-us_image_0172657663.png
+   For security purposes, you are advised to set the token in ciphertext in configuration files or environment variables and decrypt it when using it.
+
+
+.. figure:: /_static/images/en-us_image_0000001974561537.png
    :alt: **Figure 1** Header fields of the response to the request for obtaining a user token
 
    **Figure 1** Header fields of the response to the request for obtaining a user token
@@ -33,9 +36,9 @@ Similar to a request, a response also has a header, for example, **Content-type*
 
 This part is optional. The body of a response is often returned in structured format (for example, JSON or XML) as specified in the **Content-Type** header field. The response body transfers content except the response header.
 
-The following is part of the response body for the API used to obtain a user token. For the sake of limited space, only part of the content is displayed.
+The following is part of the response body for the API used to `obtain a user token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__.
 
-.. code-block::
+::
 
    {
        "token": {
@@ -55,7 +58,7 @@ If an error occurs during API calling, an error code and a message will be displ
 .. code-block::
 
    {
-       "error_msg": "The format of message is error",
+       "error_msg": The request message format is invalid.",
        "error_code": "AS.0001"
    }
 

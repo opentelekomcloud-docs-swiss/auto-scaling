@@ -18,6 +18,10 @@ This interface is used to delete a specified AS group.
 
 -  If the value of **force_delete** is set to **yes**, the AS group enters the **DELETING** state, rejecting new requests for scaling actions while completing the existing scaling actions. Then, all ECS instances are removed from the AS group and the AS group is deleted. Note that the manually added ECS instances will be removed from the AS group and the ECS instances automatically created by AS will be automatically deleted.
 
+   .. caution::
+
+      Forcibly deleting an AS group may not delete ECS instances in the group.
+
 URI
 ---
 

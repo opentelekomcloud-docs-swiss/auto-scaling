@@ -128,7 +128,7 @@ Response
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | pool_id       | String  | Specifies the backend ECS group ID.                                                                                                                          |
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | protocol_port | Integer | Specifies the backend protocol ID, which is the port on which a backend ECS listens for traffic.                                                             |
+   | protocol_port | Integer | Specifies the backend protocol port, which is the port on which a backend ECS listens for traffic.                                                           |
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | weight        | Integer | Specifies the weight, which determines the portion of requests a backend ECS processes when being compared to other backend ECSs added to the same listener. |
    +---------------+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -186,9 +186,8 @@ Example Response
            "delete_publicip": false,
            "notifications": null,
 
-           "activity_type": "MODIFY_ELB",
-           "multi_az_priority_policy": "PICK_FIRST"
-
+           "activity_type":"MODIFY_ELB",
+           "multi_az_priority_policy":"PICK_FIRST"
        }
    }
 
